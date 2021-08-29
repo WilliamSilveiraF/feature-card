@@ -11,6 +11,9 @@
     --laranja: hsl(34, 97%, 64%);
     --ciano: hsl(180, 62%, 55%);
     --vermelho: hsl(0, 78%, 62%);
+
+    --azul-dark: hsl(234, 12%, 34%);
+    --azul-cinzento: hsl(229, 6%, 66%);
 }
 
 body {
@@ -26,7 +29,7 @@ main {
     max-width: 1536px;
 }
 .boxText {
-    color: hsl(234, 12%, 34%);
+    color: var(--azul-dark);
     height: 25%;
     display: flex;
     text-align: center;
@@ -43,6 +46,7 @@ main {
 }
 .boxText > p:last-child {
     width: 40vw;
+    color: var(--azul-cinzento);
 }
 .boxCard {
     height: 75%;
@@ -77,6 +81,12 @@ main {
 .cardCyan > img, .cardRed > img, .cardYellow > img, .cardBlue > img {
     align-self: flex-end;
     width: 20%;
+}
+.cardCyan > h3, .cardRed > h3, .cardYellow > h3, .cardBlue > h3 {
+    color: var(--azul-dark);
+}
+.cardCyan > p, .cardRed > p, .cardYellow > p, .cardBlue > p {
+    color: hsl(229, 6%, 66%);
 }
 .cardRed {
     border-top: 4px solid var(--vermelho);
