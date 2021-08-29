@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --azul: hsl(212, 86%, 64%);
+    --laranja: hsl(34, 97%, 64%);
+    --ciano: hsl(180, 62%, 55%);
+    --vermelho: hsl(0, 78%, 62%);
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+main {
+    width: 80vw;
+    height: 80vh;
+    max-width: 1536px;
+}
+.boxText {
+    color: hsl(234, 12%, 34%);
+    height: 25%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.boxText > h1 {
+    font-size: 1.7rem;
+}
+.boxText > p:first-child {
+    font-size: 1.75rem;
+    font-weight: 200;
+}
+.boxText > p:last-child {
+    width: 40vw;
+}
+.boxCard {
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardCyan, .cardBlue, .cardTwo {
+    width: 30%;
+}
+.cardTwo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cardCyan, .cardRed, .cardYellow, .cardBlue {
+    height: 25vh;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+    padding: 0px 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cardCyan:hover, .cardRed:hover, .cardYellow:hover, .cardBlue:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.cardCyan {
+    border-top: 4px solid var(--ciano);
+}
+.cardCyan > img, .cardRed > img, .cardYellow > img, .cardBlue > img {
+    align-self: flex-end;
+    width: 20%;
+}
+.cardRed {
+    border-top: 4px solid var(--vermelho);
+}
+.cardYellow {
+    border-top: 4px solid var(--laranja);
+}
+.cardBlue {
+    border-top: 4px solid var(--azul);
+}
+
+@media (max-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 0vh;
+    }
+    main {
+        width: 100vw;
+        height: 175vh;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .boxText {
+        height: auto;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .boxCard {
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cardCyan, .cardBlue, .cardTwo {
+        width: 100%;
+        max-width: 315px;
+    }
+    .cardCyan, .cardBlue {
+        height: 20%;
+    }
+    .cardRed, .cardYellow {
+        height: 42.91%;
+    }
+    .cardTwo {
+        height: 46.6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .boxText > p:last-child {
+        width: 90vw;
+    }
+}
